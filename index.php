@@ -16,7 +16,7 @@ $logos = json_decode(file_get_contents('logoList.json'), true);
         <a href="manage.php">Management</a>
     </nav>
     <main>
-        <h1>Hello there!</h1>
+        <h1>Hello you!</h1>
     </main>
     
 </body>
