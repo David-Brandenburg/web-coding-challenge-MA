@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  appearance: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  height: 80px;
+  width: 100dvw;
+  background-color: rgb(58, 66, 66);
+}
+
+a {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+main {
+  background-color: #181818;
+}
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 1100px;
+  width: 100dvw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.landing-card {
+  --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+  width: 390px;
+  height: 454px;
+  padding: 5px;
+  border-radius: 1rem;
+  overflow: visible;
+  background: #f7ba2b;
+  background: var(--background);
+  position: relative;
+  z-index: 1;
+}
+
+.landing-card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  --color: #181818;
+  background: var(--color);
+  color: var(--color);
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+  border-radius: 0.7rem;
+}
+
+.landing-card::after {
+  position: absolute;
+  content: "";
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  filter: blur(25px);
+  background: #f7ba2b;
+  background: var(--background);
+  transition: opacity 0.5s;
+}
+
+.landing-card-info h1 {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: #f7ba2b;
+}
+
+.landing-card:hover::after {
+  opacity: 0;
+}
+
+.landing-card:hover .landing-card-info {
+  cursor: pointer;
+  color: #f7ba2b;
+  transition: color 1s;
+}
+
+.logo-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  grid-template-rows: auto;
+  padding: 20px;
+  width: 100dvw;
+}
+
+.logo-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo-item-info img {
+  max-width: 100%;
+  height: auto;
+}

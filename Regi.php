@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="style.css">
     <title>Cube</title>
 </head>
 <body>
-    <nav>
+    <nav class="nav-container">
         <a href="index.php">Home</a>
         <a href="manage.php">Management</a>
     </nav>
