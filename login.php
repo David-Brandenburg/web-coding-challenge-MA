@@ -16,14 +16,12 @@
             <div class="Regi-card">
                 <div class="Regi-card-info">
                     <form class="Regi-Form" action="" id="formData">
-                        <h1>Registration!</h1>
+                        <h1>Login!</h1>
                         <label for="email">Email</label>
                         <input type="email" name="Email" id="email"/>
                         <label for="password">Password</label>
                         <input type="password" name="Password" id="password"/>
-                        <label for="password2">Repeat Password</label>
-                        <input type="password" name="Password2" id="password2"/>
-                        <button type="submit" onClick="window.location.href='login.php'">Registrieren</button>
+                        <button type="submit" onClick="window.location.href='login.php'">Login</button>
                     </form>
                 </div>
             </div>

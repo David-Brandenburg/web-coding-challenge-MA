@@ -10,13 +10,15 @@ if ($conn -> connect_error) {
     die("Connction failed: " . $conn->connect_error);
 }
 
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $userPassword = $_POST['password'];
     $userEmail = $_POST['email'];
 
     $hashedPassword = password_hash($userPassword, PASSWORD_BCRYPT);
 
-    $sql = "INSERT INTO users (password, email) VALUES (?, ?)";
+    $sql = "INSERT INTO user (password, email) VALUES (?, ?)";
 
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ss", $hashedPassword, $userEmail);
