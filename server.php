@@ -10,8 +10,6 @@ if ($conn -> connect_error) {
     die("Connction failed: " . $conn->connect_error);
 }
 
-mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $userPassword = $_POST['password'];
     $userEmail = $_POST['email'];
@@ -32,3 +30,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->close(); 
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Serv up and running!</h1>
+</body>
+</html>

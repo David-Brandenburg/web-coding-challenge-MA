@@ -23,7 +23,7 @@
                         <input type="password" name="Password" id="password"/>
                         <label for="password2">Repeat Password</label>
                         <input type="password" name="Password2" id="password2"/>
-                        <button type="submit" onClick="window.location.href='login.php'">Registrieren</button>
+                        <button type="submit">Registrieren</button>
                     </form>
                 </div>
             </div>

@@ -19,4 +19,10 @@ document.getElementById("formData").addEventListener("submit", function (e) {
     };
     sendData(data);
   }
+
+  setTimeout(() => {
+    window.location.replace(
+      "http://localhost/web-coding-challenge-MA/login.php"
+    );
+  }, 3000);
 });

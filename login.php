@@ -21,7 +21,7 @@
                         <input type="email" name="Email" id="email"/>
                         <label for="password">Password</label>
                         <input type="password" name="Password" id="password"/>
-                        <button type="submit" onClick="window.location.href='login.php'">Login</button>
+                        <button type="submit">Login</button>
                     </form>
                 </div>
             </div>

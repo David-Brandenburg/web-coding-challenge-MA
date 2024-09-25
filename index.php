@@ -1,5 +1,4 @@
 <?php
-session_start();
 $jsonLogos = file_get_contents('logoList.json');
 $logos = json_decode($jsonLogos, true);
 ?>
