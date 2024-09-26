@@ -15,15 +15,15 @@
         <div class="Regi-container">
             <div class="Regi-card">
                 <div class="Regi-card-info">
-                    <form class="Regi-Form" action="" id="formData">
+                    <form class="Regi-Form" action="" id="regiData">
                         <h1>Registration!</h1>
                         <label for="email">Email</label>
-                        <input type="email" name="Email" id="email"/>
+                        <input type="email" name="email" id="email"/>
                         <label for="password">Password</label>
-                        <input type="password" name="Password" id="password"/>
+                        <input type="password" name="password" id="password"/>
                         <label for="password2">Repeat Password</label>
-                        <input type="password" name="Password2" id="password2"/>
-                        <button type="submit">Registrieren</button>
+                        <input type="password" name="password2" id="password2"/>
+                        <button type="submit" name="regi">Registrieren</button>
                     </form>
                 </div>
             </div>

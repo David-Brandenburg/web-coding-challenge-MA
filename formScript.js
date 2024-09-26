@@ -1,4 +1,4 @@
-document.getElementById("formData").addEventListener("submit", function (e) {
+document.getElementById("regiData").addEventListener("submit", function (e) {
   e.preventDefault();
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
@@ -13,11 +13,13 @@ document.getElementById("formData").addEventListener("submit", function (e) {
     console.log("email doof");
   } else {
     console.log("good");
-    let data = {
+
+    let regi_data = {
       email: email,
       password: password,
     };
-    sendData(data);
+
+    sendData(regi_data);
   }
 
   setTimeout(() => {

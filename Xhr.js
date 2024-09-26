@@ -1,4 +1,4 @@
-function sendData(data) {
+function sendData(regi_data) {
   let xhr = new XMLHttpRequest();
   let url = "server.php";
 
@@ -7,18 +7,47 @@ function sendData(data) {
 
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
-      alert("Data saved successfully!");
+      console.log(xhr.responseText);
     }
   };
 
-  let urlEncodedData = "";
   let urlEncodedDataPairs = [];
-  for (let key in data) {
+  for (let key in regi_data) {
     urlEncodedDataPairs.push(
-      encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      encodeURIComponent(key) + "=" + encodeURIComponent(regi_data[key])
     );
   }
-  urlEncodedData = urlEncodedDataPairs.join("&");
+
+  urlEncodedDataPairs.push("regi=true");
+
+  let urlEncodedData = urlEncodedDataPairs.join("&");
 
   xhr.send(urlEncodedData);
+}
+
+function login(login_data) {
+  let xhr = new XMLHttpRequest();
+  let url = "server.php"; // Dein PHP-Login-Skript
+
+  xhr.open("POST", url, true);
+  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      // Hier kannst du die Antwort verarbeiten
+      console.log(xhr.responseText);
+    }
+  };
+
+  // URL-kodierte Daten erstellen
+  let urlEncodedData = "login=true"; // Füge den login-Parameter hinzu
+  let urlEncodedDataPairs = [];
+  for (let key in login_data) {
+    urlEncodedDataPairs.push(
+      encodeURIComponent(key) + "=" + encodeURIComponent(login_data[key])
+    );
+  }
+  urlEncodedData += "&" + urlEncodedDataPairs.join("&"); // Füge die anderen Daten hinzu
+
+  xhr.send(urlEncodedData); // Anfrage senden
 }

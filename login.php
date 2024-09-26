@@ -15,20 +15,19 @@
         <div class="Regi-container">
             <div class="Regi-card">
                 <div class="Regi-card-info">
-                    <form class="Regi-Form" action="" id="formData">
+                    <form class="Regi-Form" action="" id="loginData">
                         <h1>Login!</h1>
                         <label for="email">Email</label>
                         <input type="email" name="Email" id="email"/>
                         <label for="password">Password</label>
                         <input type="password" name="Password" id="password"/>
-                        <button type="submit">Login</button>
+                        <button type="submit" name="login">Login</button>
                     </form>
                 </div>
             </div>
         </div>
-        
     </main>
     <script src="Xhr.js"></script>
-    <script src="formScript.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>
