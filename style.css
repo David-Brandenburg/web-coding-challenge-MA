@@ -204,3 +204,11 @@ main {
 .Regi-card:hover::after {
   opacity: 0;
 }
+
+.mana {
+  display: block;
+}
+
+.login {
+  display: block;
+}

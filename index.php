@@ -1,4 +1,30 @@
 <?php
+if (isset($_COOKIE["PHPSESSID"])) : ?>
+    <script>
+        window.onload = function() {
+            let mana = document.getElementById("Mana");
+            let login = document.getElementById("Login");
+            if (mana && login) {  // Überprüfen, ob beide Elemente existieren
+                mana.style.display = "block";
+                login.style.display = "none";
+            }
+        };
+    </script>
+<?php else : ?>
+    <script>
+        window.onload = function() {
+            let mana = document.getElementById("Mana");
+            let login = document.getElementById("Login");
+            if (mana && login) {  // Überprüfen, ob beide Elemente existieren
+                mana.style.display = "none";
+                login.style.display = "block";
+            }
+        };
+    </script>
+<?php endif; ?>
+
+<?php 
+
 $jsonLogos = file_get_contents('logoList.json');
 $logos = json_decode($jsonLogos, true);
 ?>
@@ -14,7 +40,8 @@ $logos = json_decode($jsonLogos, true);
 <body>
     <nav class="nav-container">
         <a href="Regi.php">Registration</a>
-        <a href="manage.php">Management</a>
+        <a href="manage.php" id="Mana" class="mana">Management</a>
+        <a href="login.php" id="Login" class="login">Login</a>
     </nav>
     <main>
         <div class="landing-container">
