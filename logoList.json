@@ -1,14 +1,18 @@
 [
-  {
-    "title": "BurgerKing",
-    "image": "public/images.png"
-  },
-  {
-    "title": "Instagram",
-    "image": "public/images.jpg"
-  },
-  {
-    "title": "Lego",
-    "image": "public/LEGO_logo.svg.png"
-  }
+    {
+        "title": "BurgerKing",
+        "image": "public\/images.png"
+    },
+    {
+        "title": "Instagram",
+        "image": "public\/images.jpg"
+    },
+    {
+        "title": "Lego",
+        "image": "public\/LEGO_logo.svg.png"
+    },
+    {
+        "title": "McDonalds",
+        "image": "public\/McDonald's_Golden_Arches.svg_3.png"
+    }
 ]

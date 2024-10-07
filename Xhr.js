@@ -36,6 +36,7 @@ function login(login_data) {
     if (xhr.readyState === 4 && xhr.status === 200) {
       // Hier kannst du die Antwort verarbeiten
       console.log(xhr.responseText);
+      alert("Login successfully!");
     }
   };
 
@@ -50,4 +51,19 @@ function login(login_data) {
   urlEncodedData += "&" + urlEncodedDataPairs.join("&"); // Füge die anderen Daten hinzu
 
   xhr.send(urlEncodedData); // Anfrage senden
+}
+
+function uploadTitlePic(Title) {
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "upload.php", true);
+  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      console.log(xhr.responseText);
+    }
+  };
+
+  // Daten an den Server senden
+  xhr.send("title=" + encodeURIComponent(Title));
 }

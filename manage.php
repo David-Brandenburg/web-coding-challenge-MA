@@ -15,6 +15,7 @@
             <div class="landing-card-info">
                 <h1>Firmen Logo hinzufügen!</h1>
                 <form action="upload.php" method="post" enctype="multipart/form-data">
+                    <input type="text" name="title"><br>
                     <input type="file" name="datei"><br>
                     <input type="submit" value="Hochladen">
                 </form>

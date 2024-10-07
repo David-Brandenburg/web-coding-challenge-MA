@@ -32,5 +32,63 @@ if(file_exists($new_path)) {
 }
 
 move_uploaded_file($_FILES['datei']['tmp_name'], $new_path);
-echo 'Bild erfolgreich hochgeladen: <a href="'.$new_path.'">'.$new_path.'</a>';
+
+$title = $_POST['title'];
+
+if(empty($title)) {
+    die('Kein Titel angegeben.');
+}
+
+$jsonFile = 'logoList.json';
+
+if(!file_exists($jsonFile)) {
+    die('JSON-Datei nicht gefunden.');
+}
+
+$jsonData = file_get_contents($jsonFile);
+$logoList = json_decode($jsonData, true);
+
+if($logoList === null && json_last_error() !== JSON_ERROR_NONE) {
+    die('Fehler beim Dekodieren der JSON-Datei:' . json_last_error_msg());
+}
+
+$newLogo = [
+    'title'=> $title,
+    'image'=> $new_path
+];
+
+$logoList[] = $newLogo;
+
+if(file_put_contents($jsonFile, json_encode($logoList, JSON_PRETTY_PRINT)) === false) {
+    die('Fehler beim Schreiben der JSON-Datei.');
+} else {
+    echo "Neues Logo erfolgreich der Json hinzugefügt.";
+}
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cube</title>
+</head>
+<body>
+    <nav class="nav-container">
+        <a href="index.php">Home</a>
+    </nav>
+    <main>
+        <div class="Regi-container">
+            <div class="Regi-card">
+                <div class="Regi-card-info">
+                <?php
+echo '<p>Bild erfolgreich hochgeladen: <a href="'.$new_path.'">'.$new_path.'</a></p>';
+?>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+

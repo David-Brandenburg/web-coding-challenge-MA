@@ -9,7 +9,6 @@
 <body>
     <nav class="nav-container">
         <a href="index.php">Home</a>
-        <a href="manage.php">Management</a>
     </nav>
     <main>
         <div class="Regi-container">
