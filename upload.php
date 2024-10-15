@@ -62,7 +62,11 @@ $logoList[] = $newLogo;
 if(file_put_contents($jsonFile, json_encode($logoList, JSON_PRETTY_PRINT)) === false) {
     die('Fehler beim Schreiben der JSON-Datei.');
 } else {
-    echo "Neues Logo erfolgreich der Json hinzugefügt.";
+    echo "<script>
+        setTimeout(function() {
+            window.location.href = 'http://localhost/web-coding-challenge-MA/index.php';
+        }, 3000); // 3 Sekunden warten
+    </script>";
 }
 ?>
 
@@ -83,7 +87,7 @@ if(file_put_contents($jsonFile, json_encode($logoList, JSON_PRETTY_PRINT)) === f
             <div class="Regi-card">
                 <div class="Regi-card-info">
                 <?php
-echo '<p>Bild erfolgreich hochgeladen: <a href="'.$new_path.'">'.$new_path.'</a></p>';
+echo '<p>Bild erfolgreich hochgeladen!<p>';
 ?>
                 </div>
             </div>

@@ -7,20 +7,23 @@
     <title>Cube</title>
 </head>
 <body>
-    <nav class="nav-container">
+<nav class="nav-container">
         <a href="index.php">Home</a>
-    </nav>
-    <main class="landing-container">
-        <div class="landing-card">
-            <div class="landing-card-info">
-                <h1>Firmen Logo hinzufügen!</h1>
-                <form action="upload.php" method="post" enctype="multipart/form-data">
+</nav>
+<main>
+    <div class="Regi-container">
+        <div class="Regi-card">
+            <div class="Regi-card-info">
+                <form class="Management-form" action="upload.php" method="post" enctype="multipart/form-data">
+                    <h2>Neues Logo hinzufügen!</h2>
+                    <label for="title">Title</label>
                     <input type="text" name="title"><br>
                     <input type="file" name="datei"><br>
-                    <input type="submit" value="Hochladen">
+                    <button class="login-btn" type="submit"><span>Hochladen</span></button>
                 </form>
             </div> 
         </div>
-    </main>
+    </div>
+</main>
 </body>
 </html>

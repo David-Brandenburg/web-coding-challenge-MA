@@ -9,6 +9,7 @@
 <body>
     <nav class="nav-container">
         <a href="index.php">Home</a>
+        <a href="Regi.php" id="Regi" class="regi">Registration</a>
     </nav>
     <main>
         <div class="Regi-container">
@@ -20,7 +21,7 @@
                         <input type="email" name="Email" id="email"/>
                         <label for="password">Password</label>
                         <input type="password" name="Password" id="password"/>
-                        <button type="submit" name="login">Login</button>
+                        <button type="submit" name="login" class="login-btn"><span>Login</span></button>
                     </form>
                 </div>
             </div>

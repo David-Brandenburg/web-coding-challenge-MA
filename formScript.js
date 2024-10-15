@@ -4,14 +4,18 @@ document.getElementById("regiData").addEventListener("submit", function (e) {
   let password = document.getElementById("password").value;
   let password2 = document.getElementById("password2").value;
   let emailpattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  let vaild = true;
 
   if (password !== password2) {
     alert("Passwords are not matching!");
     console.log("no match");
+    vaild = false;
   } else if (!emailpattern.test(email)) {
     alert("Bitte geben Sie eine gültige E-Mail-Adresse ein.");
     console.log("email doof");
+    vaild = false;
   } else {
+    alert("Erfolgreich registriert!");
     console.log("good");
 
     let regi_data = {
@@ -21,10 +25,11 @@ document.getElementById("regiData").addEventListener("submit", function (e) {
 
     sendData(regi_data);
   }
-
-  setTimeout(() => {
-    window.location.replace(
-      "http://localhost/web-coding-challenge-MA/login.php"
-    );
-  }, 3000);
+  if (vaild) {
+    setTimeout(() => {
+      window.location.replace(
+        "http://localhost/web-coding-challenge-MA/login.php"
+      );
+    }, 1000);
+  }
 });

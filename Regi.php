@@ -1,3 +1,31 @@
+<?php
+if (isset($_COOKIE["PHPSESSID"])) : ?>
+    <script>
+        window.onload = function() {
+            let mana = document.getElementById("Mana");
+            let Home = document.getElementById("Home");
+            let login = document.getElementById("Login");
+            if (Home && mana) {  // Überprüfen, ob beide Elemente existieren
+                mana.style.display = "block";
+                login.style.display = "none";
+            }
+            
+        };
+    </script>
+<?php else : ?>
+
+    <script>
+        window.onload = function() {
+            let mana = document.getElementById("Mana");
+            let Home = document.getElementById("Home");
+            if (Home && mana) {  // Überprüfen, ob beide Elemente existieren
+                mana.style.display = "none";
+                login.style.display = "block";
+            }
+        };
+    </script>
+<?php endif; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +36,9 @@
 </head>
 <body>
     <nav class="nav-container">
-        <a href="index.php">Home</a>
-        <a href="manage.php">Management</a>
+        <a href="index.php" id="Home">Home</a>
+        <a href="manage.php" id="Mana">Management</a>
+        <a href="login.php" id="Login" class="login">Login</a>
     </nav>
     <main>
         <div class="Regi-container">
@@ -23,7 +52,7 @@
                         <input type="password" name="password" id="password"/>
                         <label for="password2">Repeat Password</label>
                         <input type="password" name="password2" id="password2"/>
-                        <button type="submit" name="regi">Registrieren</button>
+                        <button type="submit" name="regi" class="login-btn"><span>Registrieren</span></button>
                     </form>
                 </div>
             </div>

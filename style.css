@@ -103,6 +103,12 @@ main {
   color: #f7ba2b;
   transition: color 1s;
 }
+.Headline-logo-Container {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f7ba2b;
+  text-align: center;
+  text-decoration: underline;
+}
 
 .logo-container {
   display: grid;
@@ -119,14 +125,15 @@ main {
   justify-content: flex-start;
   align-items: center;
   padding: 10px;
-  border: 1px solid #ccc;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   font-family: Arial, Helvetica, sans-serif;
+  color: #f7ba2b;
 }
 
 .logo-item-info img {
   max-width: 100%;
   height: auto;
+  margin-top: 15px;
 }
 
 .Regi-container {
@@ -178,6 +185,7 @@ main {
 .Regi-Form input {
   font-size: medium;
   border-radius: 10px;
+  padding: 10px;
 }
 
 .Regi-card::after {
@@ -211,4 +219,119 @@ main {
 
 .login {
   display: block;
+}
+
+.regi {
+  display: block;
+}
+
+.logout {
+  display: block;
+}
+
+.login-btn {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.9rem 2rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 17px;
+  border-radius: 500px;
+  overflow: hidden;
+  background: #f7ba2b;
+  color: ghostwhite;
+}
+
+.login-btn span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+}
+
+.login-btn:hover span {
+  color: black;
+}
+
+.login-btn::before,
+.login-btn::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.login-btn::before {
+  content: "";
+  background: #000;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.login-btn:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+.Management-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70%;
+}
+
+.Management-form input {
+  font-size: medium;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.Des-card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  --color: #181818;
+  background: var(--color);
+  color: #f7ba2b;
+  gap: 10px;
+  border-radius: 0.7rem;
+  padding: 10px;
+}
+
+.Des-card {
+  --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+  padding: 5px;
+  margin: 50px;
+  border-radius: 1rem;
+  overflow: visible;
+  background: #f7ba2b;
+  background: var(--background);
+  position: relative;
+  z-index: 1;
+}
+
+.Des-card::after {
+  position: absolute;
+  content: "";
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  filter: blur(25px);
+  background: #f7ba2b;
+  background: var(--background);
+  transition: opacity 0.5s;
 }

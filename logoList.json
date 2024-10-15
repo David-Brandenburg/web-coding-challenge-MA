@@ -12,7 +12,19 @@
         "image": "public\/LEGO_logo.svg.png"
     },
     {
-        "title": "McDonalds",
-        "image": "public\/McDonald's_Golden_Arches.svg_3.png"
+        "title": "McDonald\u00b4s",
+        "image": "public\/McDonald's_Golden_Arches.svg.png"
+    },
+    {
+        "title": "Bosch",
+        "image": "public\/1361316.png"
+    },
+    {
+        "title": "Electronic Arts",
+        "image": "public\/Electronic-Arts-Logo.svg.png"
+    },
+    {
+        "title": "Ubisoft",
+        "image": "public\/images1.jpg"
     }
 ]

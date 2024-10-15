@@ -4,9 +4,15 @@ if (isset($_COOKIE["PHPSESSID"])) : ?>
         window.onload = function() {
             let mana = document.getElementById("Mana");
             let login = document.getElementById("Login");
+            let logout = document.getElementById("Logout");
+            let Registration = document.getElementById("Regi");
             if (mana && login) {  // Überprüfen, ob beide Elemente existieren
                 mana.style.display = "block";
                 login.style.display = "none";
+            }
+            if (Regi && Logout) {
+                Regi.style.display = "none";
+                Logout.style.display = "block";
             }
         };
     </script>
@@ -15,9 +21,15 @@ if (isset($_COOKIE["PHPSESSID"])) : ?>
         window.onload = function() {
             let mana = document.getElementById("Mana");
             let login = document.getElementById("Login");
+            let logout = document.getElementById("Logout");
+            let Registration = document.getElementById("Regi");
             if (mana && login) {  // Überprüfen, ob beide Elemente existieren
                 mana.style.display = "none";
                 login.style.display = "block";
+            }
+            if (Regi && Logout) {
+                Regi.style.display = "block";
+                Logout.style.display = "none";
             }
         };
     </script>
@@ -39,7 +51,8 @@ $logos = json_decode($jsonLogos, true);
 </head>
 <body>
     <nav class="nav-container">
-        <a href="Regi.php">Registration</a>
+        <a href="Regi.php" id="Regi" class="regi">Registration</a>
+        <a href="logout.php" id="Logout" class="logout">Logout</a>
         <a href="manage.php" id="Mana" class="mana">Management</a>
         <a href="login.php" id="Login" class="login">Login</a>
     </nav>
@@ -52,8 +65,9 @@ $logos = json_decode($jsonLogos, true);
                 </div>
             </button>
         </div>
-
+        <h1 class="Headline-logo-Container">Companies that are already using The Cube!</h1>
         <div class="logo-container">
+            
             <?php foreach ($logos as $logo): ?>
                 <div class="logo-item">
                     <div class="logo-item-info">
