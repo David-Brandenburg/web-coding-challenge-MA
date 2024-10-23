@@ -28,3 +28,23 @@ Sobald XAMPP läuft, richte die MySQL-Datenbank wie folgt ein:
    | `password`    | TEXT     | NOT NULL                    |
    | `user_delete` | INT      | Standardwert: NULL          |
    | `last_login`  | DATETIME | current_timestamp()         |
+
+### 3. Repository klonen
+
+1. Klone das Repository in das `htdocs`-Verzeichnis von XAMPP. Gehe dazu in das `htdocs`-Verzeichnis:
+
+   https://github.com/David-Brandenburg/web-coding-challenge-MA von hier, das Repository clonen.
+
+### 4. Project im Browser öffnen
+
+Project im Browser über http://localhost/web-coding-challenge-MA/ öffnen
+
+### 5. Benutzerregistrierung und Anmeldung
+
+    Öffne die Webseite und registriere einen neuen Benutzer.
+    Logge dich mit den registrierten Zugangsdaten ein.
+
+### 6. Firma und Logo hochladen
+
+    Nach dem Einloggen kannst du eine neue Firma hinzufügen.
+    Lade ein Firmenlogo hoch, um das Formular abzuschließen.
