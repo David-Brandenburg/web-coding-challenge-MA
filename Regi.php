@@ -59,7 +59,6 @@ if (isset($_COOKIE["PHPSESSID"])) : ?>
         </div>
         
     </main>
-    <script src="Xhr.js"></script>
-    <script src="formScript.js"></script>
+    <script src="Registration.js"></script>
 </body>
 </html>

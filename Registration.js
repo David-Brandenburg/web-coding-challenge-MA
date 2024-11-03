@@ -33,3 +33,30 @@ document.getElementById("regiData").addEventListener("submit", function (e) {
     }, 1000);
   }
 });
+
+function sendData(regi_data) {
+  let xhr = new XMLHttpRequest();
+  let url = "server.php";
+
+  xhr.open("POST", url, true);
+  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      console.log(xhr.responseText);
+    }
+  };
+
+  let urlEncodedDataPairs = [];
+  for (let key in regi_data) {
+    urlEncodedDataPairs.push(
+      encodeURIComponent(key) + "=" + encodeURIComponent(regi_data[key])
+    );
+  }
+
+  urlEncodedDataPairs.push("regi=true");
+
+  let urlEncodedData = urlEncodedDataPairs.join("&");
+
+  xhr.send(urlEncodedData);
+}

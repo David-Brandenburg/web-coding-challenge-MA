@@ -27,7 +27,6 @@
             </div>
         </div>
     </main>
-    <script src="Xhr.js"></script>
     <script src="login.js"></script>
 </body>
 </html>
