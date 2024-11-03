@@ -1,34 +1,10 @@
 [
     {
-        "title": "BurgerKing",
-        "image": "public\/images.png"
+        "title": "Demo King",
+        "image": "public\/images.jpeg"
     },
     {
-        "title": "Instagram",
-        "image": "public\/images.jpg"
-    },
-    {
-        "title": "Lego",
-        "image": "public\/LEGO_logo.svg.png"
-    },
-    {
-        "title": "McDonald\u00b4s",
-        "image": "public\/McDonald's_Golden_Arches.svg.png"
-    },
-    {
-        "title": "Bosch",
-        "image": "public\/1361316.png"
-    },
-    {
-        "title": "Electronic Arts",
-        "image": "public\/Electronic-Arts-Logo.svg.png"
-    },
-    {
-        "title": "Ubisoft",
-        "image": "public\/images1.jpg"
-    },
-    {
-        "title": "Nike",
-        "image": "public\/Download.png"
+        "title": "Demo M\u00e4ces",
+        "image": "public\/images (1).jpeg"
     }
 ]
