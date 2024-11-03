@@ -36,7 +36,16 @@ function login(login_data) {
     if (xhr.readyState === 4 && xhr.status === 200) {
       // Hier kannst du die Antwort verarbeiten
       console.log(xhr.responseText);
-      alert("Login successfully!");
+      if (xhr.responseText === "No user found with this email.") {
+        return alert("No user found with this email.");
+      } else if (xhr.responseText === "Invalid password.") {
+        return alert("Invalid password.");
+      } else {
+        alert("Login succsseful!");
+        window.location.replace(
+          "http://localhost/web-coding-challenge-MA/manage.php"
+        );
+      }
     }
   };
 
